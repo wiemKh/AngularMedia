@@ -17,6 +17,20 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "my-lib": [
+        "dist/my-lib"
+      ],
+      "my-lib/*": [
+        "dist/my-lib/*"
+      ],
+      "angular-media": [
+        "dist/angular-media"
+      ],
+      "angular-media/*": [
+        "dist/angular-media/*"
+      ]
+    }
   }
 }

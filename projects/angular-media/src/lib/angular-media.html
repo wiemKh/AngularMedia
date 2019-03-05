@@ -1,0 +1,46 @@
+<p>
+    angular-media works!
+  </p>
+  <div *ngIf="displayAudio">
+<span *ngIf="!displayAudioPlayer&&displayStopAudio" style="flex: 4;padding: 10px" class="Dr_inputM">
+    <i class="fa fa-microphone-slash Dr_CAB" (click)="stopRecord();"></i>
+    <span class="DrC1O" style="margin-left: 15px" (click)="stopRecord();">stop</span>
+  </span>
+  
+  <span *ngIf="displayAudioPlayer" style="flex: 4;padding: 10px" class="Dr_inputM">
+    <audio *ngIf="displayAudioPlayer" [src]="myaudiourl" controls></audio>
+  </span>
+  
+  <span *ngIf="!displayAudioPlayer&&!displayStopAudio" style="flex: 4;padding: 10px" class="Dr_inputM">
+    <i class="fa fa-play Dr_lb_col01" (click)="start()"></i>
+    <span class="Dr_text_Imprim" (click)="start()" style="margin-left: 15px">start</span>
+  </span>
+  
+
+  </div>
+
+
+
+  <div class="col-xs-12 col-md-12 top_br"  *ngIf="displayVideo">
+           
+    <span class="row" style="display: flex">
+      <span *ngIf="displayStopVideo&&!displayVideoPlayer" style="flex: 4;padding: 10px" class="Dr_inputM">
+        <i class="fa fa-dot-circle-o Dr_CAB" style="font-size: 20px"></i>
+        <span class="DrC1O" style="margin-left: 15px" (click)="stopVideo()">stop</span>
+        <span class="timermodalvideo"> {{currettime | amDateFormat:'mm:ss'}}</span>
+      </span>
+    
+      <span *ngIf="!displayStopVideo" style="flex: 4;padding: 10px" class="Dr_inputM">
+        <i class="fa fa-play Dr_lb_col01"></i>
+        <span class="Dr_text_Imprim" style="margin-left: 15px" (click)="startVideo()">startVid
+          </span>
+      </span>
+      <video *ngIf="!displayVideoPlayer" id="video" width="640" height="480">
+      </video>
+      <video *ngIf="displayVideoPlayer" id="video1" width="640" height="480" controls 
+        [src]="myurl">
+      </video>
+    </span>
+ 
+
+</div>

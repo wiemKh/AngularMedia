@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { setHours, setMinutes, setSeconds, addSeconds } from 'date-fns';
+
 declare var MediaRecorder: any;
 
 @Component({
